@@ -1,0 +1,3 @@
+[submodule "weoVIM"]
+	path = weoVIM
+	url = https://github.com/Divenchy/weoVIM.git

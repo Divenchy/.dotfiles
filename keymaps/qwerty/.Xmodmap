@@ -1,0 +1,8 @@
+clear lock
+clear mod5
+keycode 108 = Mode_switch NoSymbol NoSymbol NoSymbol 
+keycode 66 = backslash bar NoSymbol NoSymbol
+
+
+
+

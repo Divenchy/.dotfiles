@@ -1,0 +1,32 @@
+# ~/.config/starship.toml
+
+# Use custom format
+format = '''
+[┌───────────────────>](bold green)
+[│](bold green)$username$hostname$localip$singularity$directory$git_branch$git_commit$git_state$git_metrics$git_status$docker_context$package$c$cmake$cobol$dart$dotnet$golang$haskell$java$lua$perl$python$nodejs$ocaml$php$ruby$rust$typst$zig$buf$meson$direnv$env_var$sudo$time$status
+[│](bold green)$cmd_duration$jobs$memory_usage$os$container$shell
+[└─>](bold green) '''
+
+# Use default format
+# format = '$all'
+
+# Wait 10 milliseconds for starship to check files under the current directory.
+scan_timeout = 10
+
+
+# Set 'foo' as custom color palette
+palette = 'foo'
+
+# Define custom colors
+[palettes.foo]
+# Overwrite existing color
+blue = '21'
+# Define new color
+mustard = '#af8700'
+
+# Define memory_usage module
+[memory_usage]
+disabled = false
+threshold = -1
+symbol = ' '
+style = 'bold dimmed green'
