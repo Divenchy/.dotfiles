@@ -63,9 +63,19 @@ if [[ $os == "openSUSE" ]] || [[ $os == "1" ]]; then                 ## Linux op
 
     cd ~/
 
-    #-- Apply weoVIM config to neovim
-    ln -s ~/.dotfiles/weoVIM ~/.config/nvim
+    #####-- Apply weoVIM config to neovim --#####
 
+    ## First ensure submodules are up to date
+    cd ~/.dotfiles/
+    git submodule update --init --recursive
+    cd ~/.dotfiles/weoVIM/
+    git fetch
+    ## Make sure using main branch
+    git checkout main
+    git pull origin main
+    ## Back to home
+    cd ~/
+    ln -s ~/.dotfiles/weoVIM ~/.config/nvim
     ######### ---END of weovim install--- ##########
 
 
@@ -116,9 +126,20 @@ elif [[ $os == "WSL-openSUSE" ]] || [[ $os == "2" ]]; then               ## WSL 
 
     cd ~/
 
-    #-- Apply weoVIM config to neovim
-    ln -s ~/.dotfiles/weoVIM ~/.config/nvim
+    #####-- Apply weoVIM config to neovim --#####
 
+    ## First ensure submodules are up to date
+    cd ~/.dotfiles/
+    git submodule update --init --recursive
+    cd ~/.dotfiles/weoVIM/
+    git fetch
+    ## Make sure using main branch
+    git checkout main
+    git pull origin main
+    ## Back to home
+    cd ~/
+
+    ln -s ~/.dotfiles/weoVIM ~/.config/nvim
     ######### ---END of weovim install--- ##########
 
 
@@ -152,7 +173,19 @@ elif [[ $os == "MacOS" ]] || [[ $os == "3" ]]; then                     ### MacO
 
     cd ~/
 
-    #-- Apply weoVIM config to neovim
+    #####-- Apply weoVIM config to neovim --#####
+
+    ## First ensure submodules are up to date
+    cd ~/.dotfiles/
+    git submodule update --init --recursive
+    cd ~/.dotfiles/weoVIM/
+    git fetch
+    ## Make sure using main branch
+    git checkout main
+    git pull origin main
+    ## Back to home
+    cd ~/
+
     ln -s ~/.dotfiles/weoVIM ~/.config/nvim
 
     ######### ---END of weovim install--- ##########
