@@ -38,7 +38,7 @@ export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
 
 ### ------------- PLUG-INS --------------- ###
 source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.config/zsh/powerlevel10k/powerlevel10k.zsh-theme
+source ~/.config/zsh/powerlevel-theme/powerlevel10k.zsh-theme
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 source ~/.config/zsh/zsh-you-should-use/you-should-use.plugin.zsh
