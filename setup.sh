@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Query user for various set-up options
-read -p "What os is this on?\nEnter 1, 2, or 3:\n 1)openSUSE\n 2)WSL-openSUSE\n 3)MacOS" os
+read -p "`echo $'What os is this on?\nEnter 1, 2, or 3:\n 1)openSUSE\n 2)WSL-openSUSE\n 3)MacOS\nINPUT: '`" os
 
 if [[ $os == "openSUSE" ]] || [[ $os == "1" ]]; then                 ## Linux openSUSE case
     # Hopefully install most needed packages and some nice ones
