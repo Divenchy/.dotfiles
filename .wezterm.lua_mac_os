@@ -37,8 +37,6 @@ config.colors = {
   }
 }
 
--- FOR WINDOWS WSL
--- config.default_domain = "WSL:openSUSE_Tumbleweed"
 
 -- Tab bar styling
 
@@ -192,7 +190,7 @@ config.inactive_pane_hsb = {
 config.leader = { key = 'LeftAlt', mods = 'SUPER', timeout_milliseconds = 1000 }
 config.keys = {
   {
-    key = '\\',
+    key = '|',
     mods = 'SUPER',
     action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
   },
@@ -234,4 +232,3 @@ config.keys = {
 
 
 return config
-
