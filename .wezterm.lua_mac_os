@@ -190,7 +190,7 @@ config.inactive_pane_hsb = {
 config.leader = { key = 'LeftAlt', mods = 'SUPER', timeout_milliseconds = 1000 }
 config.keys = {
   {
-    key = '|',
+    key = '\\',
     mods = 'SUPER',
     action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
   },
