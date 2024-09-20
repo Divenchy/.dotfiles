@@ -37,6 +37,8 @@ config.colors = {
   }
 }
 
+-- FOR WINDOWS WSL
+-- config.default_domain = "WSL:openSUSE_Tumbleweed"
 
 -- Tab bar styling
 

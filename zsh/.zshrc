@@ -1,10 +1,10 @@
 ### Start TMUX
-if [[ "$TMUX" = "" ]]; then;
-    TMUX="tmux new-session -d -s WEODIMENSION"
-    eval "$TMUX"
-    tmux attach-session -d -t WEODIMENSION
-    tmux source ~/.tmux.conf
-fi
+# if [[ "$TMUX" = "" ]]; then;
+#     TMUX="tmux new-session -d -s WEODIMENSION"
+#     eval "$TMUX"
+#     tmux attach-session -d -t WEODIMENSION
+#     tmux source ~/.tmux.conf
+# fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -69,16 +69,14 @@ alias TAMUDrive='cd /run/user/1000/gvfs/smb-share:server=storage.continu      um
 alias nvrc="nvim ~/.config/nvim/"
 
 # Nifty for school
-alias googVM 'ssh -i ~/.ssh/google_vm lfexp35@35.223.84.22'
-alias discord 'flatpak run com.discordapp.Discord'
+alias googVM='ssh -i ~/.ssh/google_vm lfexp35@35.223.84.22'
+alias discord='flatpak run com.discordapp.Discord'
 
+# Makefiles
+alias makeMake='~/.scripts/makefiles/create.sh'
 
-# JavaMyLava
-alias jfxc="javac --module-path $JFX_PATH --add-modules javafx.controls,javafx.graphics,javafx.base"
-alias jfx="java --module-path $JFX_PATH --add-modules javafx.controls,javafx.graphics,javafx.base"
-
-
-
+#Database (School)
+alias proj_db='psql -h csce-315-db.engr.tamu.edu -p 5432 -U csce331_12 -d csce331_12'
 alias zig='~/zig/./zig'
 
 
