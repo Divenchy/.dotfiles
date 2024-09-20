@@ -96,12 +96,19 @@ static const char *vol_up[] = {"amixer", "set", "Master", "5%+", NULL };
 static const char *vol_down[] = {"amixer", "set", "Master", "5%-", NULL };
 static const char *vol_toggle[] = {"amixer", "set", "Master", "toggle", NULL };
 
+/*Screenshot utility*/
+static const char *screenie_box[] = {"/home/weoweo/.scripts/weoDWM/screenie_area_n_clipboard.sh"};
+static const char *screenie_window[] = {"/home/weoweo/.scripts/weoDWM/screenie_window_n_clipboard.sh"};
+
+
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_f,      spawn,          {.v = firefoxcmd } },
 	{ MODKEY|ShiftMask,             XK_Escape, spawn,          {.v = powermenu } },
+	{ MODKEY,			XK_s,	   spawn,          {.v = screenie_box } },
+	{ MODKEY|ShiftMask,             XK_s,	   spawn,          {.v = screenie_window } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_n,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_e,      focusstack,     {.i = -1 } },
