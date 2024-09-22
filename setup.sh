@@ -81,7 +81,7 @@ if [[ $os == "openSUSE" ]] || [[ $os == "1" ]]; then                 ## Linux op
 
     ##### Personal stuffs #######
     ln -s ~/.dotfiles/.scripts ~/.scripts
-    ln -s ~/.dotfiles/makeTemplates/ ~/makeTemplates
+    ln -s ~/.dotfiles/buildTemplates ~/
 
     ##### ---- END of PERSONAL ---- ########
 elif [[ $os == "WSL-openSUSE" ]] || [[ $os == "2" ]]; then               ## WSL case
@@ -145,7 +145,7 @@ elif [[ $os == "WSL-openSUSE" ]] || [[ $os == "2" ]]; then               ## WSL 
 
     ##### Personal stuffs #######
     ln -s ~/.dotfiles/.scripts ~/.scripts
-    ln -s ~/.dotfiles/makeTemplates/ ~/makeTemplates
+    ln -s ~/.dotfiles/buildTemplate ~/
 
 elif [[ $os == "MacOS" ]] || [[ $os == "3" ]]; then                     ### MacOS case
 
@@ -203,6 +203,6 @@ elif [[ $os == "MacOS" ]] || [[ $os == "3" ]]; then                     ### MacO
 
     ##### Personal stuffs #######
     ln -s ~/.dotfiles/.scripts ~/.scripts
-    ln -s ~/.dotfiles/makeTemplates/ ~/makeTemplates
+    ln -s ~/.dotfiles/buildTemplates ~/
 fi
 
