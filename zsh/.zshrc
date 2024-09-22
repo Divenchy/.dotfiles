@@ -23,6 +23,7 @@ eval "$(thefuck --alias fk)"
 export PATH="~/.config/bin:$PATH"
 export PATH="~/.local/bin:$PATH"
 export JFX_PATH="/home/weoweo/binaries/javafx-sdk-22.0.2/lib"
+export JAVA_HOME="/usr/lib64/jvm/java-22-openjdk-22"
 
 # Defaults
 export EDITOR="nvim"
@@ -138,8 +139,8 @@ vl() {
 
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
-bindkey '^I' autosuggest-accept
-setopt auto_cd
+# bindkey '^I' autosuggest-accept
+# setopt auto_cd
 
 HISTSIZE=5000
 HISTFILE=~/.config/.zsh_hist
@@ -156,3 +157,7 @@ setopt hist_find_no_dups
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
