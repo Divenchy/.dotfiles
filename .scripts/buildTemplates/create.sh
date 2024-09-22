@@ -1,4 +1,4 @@
-read -p "Enter language (Java, C, C++, Zig, Rust): " lang
+read -p "`echo $'Enter language or build tool:\n () Java\n () C\n () C++\n () Zig\n () Rust\n () gradle\nAnswer: '`" lang
 
 if [[ $lang == "Java" ]]; then
     cp ~/buildTemplates/makefiles/makefile_Java $(pwd)/makefile

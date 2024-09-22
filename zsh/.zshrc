@@ -75,7 +75,7 @@ alias googVM='ssh -i ~/.ssh/google_vm lfexp35@35.223.84.22'
 alias discord='flatpak run com.discordapp.Discord'
 
 # Makefiles
-alias makeMake='~/.scripts/makefiles/create.sh'
+alias makeBuild='~/.scripts/buildTemplates/create.sh'
 
 #Database (School)
 alias proj_db='psql -h csce-315-db.engr.tamu.edu -p 5432 -U csce331_12 -d csce331_12'
