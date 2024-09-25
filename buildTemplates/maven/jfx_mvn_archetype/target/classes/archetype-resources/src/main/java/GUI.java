@@ -1,13 +1,8 @@
 import javafx.application.Application;
-import javafx.collections.ObservableList;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
-import javafx.scene.layout.*;
-import javafx.stage.*;
-import javafx.collections.*;
-import javafx.geometry.Insets;
+import javafx.stage.Stage;
 
-public class Main extends Application {
+public class GUI extends Application {
     
     Stage window;
 
@@ -15,10 +10,13 @@ public class Main extends Application {
         launch(args);
     }
 
+
+    // Example of a login screen
     @Override
     public void start(Stage primaryStage) throws Exception {
         window = primaryStage;
         window.setTitle("WEOWINDOW");
+
 
         Scene scene = new Scene(vBox);
         window.setScene(scene);
@@ -26,3 +24,4 @@ public class Main extends Application {
     }
 
 }
+

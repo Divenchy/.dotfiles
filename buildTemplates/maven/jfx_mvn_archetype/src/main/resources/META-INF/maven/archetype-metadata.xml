@@ -4,17 +4,15 @@
             name="jfx_basic_proj">
         <fileSets>
             <fileSet filtered="true" packaged="true">
-                <directory>src/main/java</directory>
+            <directory>src/main/java</directory>
                 <includes>
-                    <include>**/*.java</include>
-                    <include>*/*.java</include>
+                <include>**/*.java</include>
                 </includes>
             </fileSet>
             <fileSet filtered="true" packaged="true">
                 <directory>src/test/java</directory>
                 <includes>
-                    <include>**/*.java</include>
-                    <include>*/*.java</include>
+                <include>**/*.java</include>
                 </includes>
             </fileSet>
             <fileSet filtered="true" packaged="true">
