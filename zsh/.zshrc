@@ -43,7 +43,7 @@ source ~/.config/zsh/powerlevel-theme/powerlevel10k.zsh-theme
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 source ~/.config/zsh/zsh-you-should-use/you-should-use.plugin.zsh
-source ~/.config/zsh/fzf-tab/fzf-tab.zsh
+source ~/.config/zsh/fzf-tab/fzf-tab.plugin.zsh
 
 #### -------------- END OF PLUG-INS ---------###
 
@@ -139,7 +139,6 @@ vl() {
 
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
-# bindkey '^I' autosuggest-accept
 setopt auto_cd
 
 HISTSIZE=5000
