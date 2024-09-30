@@ -78,7 +78,7 @@ alias discord='flatpak run com.discordapp.Discord'
 # Makefiles
 alias makeBuild='~/.scripts/buildTemplates/create.sh'
 
-#Database (School)
+# Database (School)
 alias proj_db='psql -h csce-315-db.engr.tamu.edu -p 5432 -U csce331_12 -d csce331_12'
 alias zig='~/zig/./zig'
 
