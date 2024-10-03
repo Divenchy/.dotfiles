@@ -82,6 +82,8 @@ alias makeBuild='~/.scripts/buildTemplates/create.sh'
 alias proj_db='psql -h csce-315-db.engr.tamu.edu -p 5432 -U csce331_12 -d csce331_12'
 alias zig='~/zig/./zig'
 
+# Code wit Me (intelliJ)
+alias co_auth='~/.scripts/github/co_auth.sh'
 
 #----------------- FUNCTIONS ----------------#
 
