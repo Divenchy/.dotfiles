@@ -166,10 +166,10 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY,                       XK_Escape, quit,           {0} },
-        { MODKEY|ShiftMask,             XK_n,      viewtoleft,     {0} },
-	{ MODKEY|ShiftMask,             XK_e,      viewtoright,    {0} },
-	{ MODKEY|ControlMask,           XK_n,      tagtoleft,      {0} },
-	{ MODKEY|ControlMask,           XK_e,      tagtoright,     {0} },
+        { MODKEY|ShiftMask,             XK_e,      viewtoleft,     {0} },
+	{ MODKEY|ShiftMask,             XK_n,      viewtoright,    {0} },
+	{ MODKEY|ControlMask,           XK_e,      tagtoleft,      {0} },
+	{ MODKEY|ControlMask,           XK_n,      tagtoright,     {0} },
  	TAGKEYS(                        XK_1,                      0)
 };
 

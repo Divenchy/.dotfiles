@@ -27,7 +27,7 @@ export JAVA_HOME="/usr/lib64/jvm/java-22-openjdk-22"
 
 # Defaults
 export EDITOR="nvim"
-export SUDO_EDITOR="nvim"
+export SUDO_EDITOR="/usr/local/bin/nvim"
 export TERMINAL="st"
 
 # Setup previews with fzf
