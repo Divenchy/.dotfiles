@@ -1,35 +1,41 @@
-
 thy_self='Co-authored-by: divenchy <lf7834am@tamu.edu>'
 co_auth_1='Co-authored-by: nathantruongtamu <156832505+nathantruongtamu@users.noreply.github.com>'
 co_auth_2='Co-authored-by: cdavis328 <cdavis328@tamu.edu>'
 co_auth_3='Co-authored-by: eoe789 <125845846+eoe789@users.noreply.github.com>'
 co_auth_4='Co-authored-by: FrozenEarth <39888817+frozenearth-git@users.noreply.github.com>'
-commit_string='"'
 
-
+# Start with the commit message
 read -p "`echo $'Enter the commit message: '`" message
-commit_string+=$message 
-commit_string+='"'
-commit_string+=' -m '
-commit_string+='"'
-read -a contributors -p "`echo $'Who contributed? If there are multiple authors, separate with a space (e.g. foo bar):\n 1. Connor\n 2. Eduardo\n 3. Nathan\n 4. Steven\n $$ '`"  
+
+# Array to hold all commit messages
+commit_messages=("-m" "$message")
+
+# Read contributors
+read -p "`echo $'Who contributed? If there are multiple authors, separate with a space (e.g. foo bar):\n 1. Connor\n 2. Eduardo\n 3. Nathan\n 4. Steven\n $$ '`" -a contributors
+
+# Add co-authored messages based on contributors
 for i in ${contributors[*]};
 do
     if [[ $i == "Connor" || $i == "1" ]]; then
-        commit_string+=$co_auth_2
-        commit_string+=',\n'
+        commit_messages+=("-m" "$co_auth_2")
     elif [[ $i == "Eduardo" || $i == "2" ]]; then
-        commit_string+=$co_auth_3
-        commit_string+=',\n'
+        commit_messages+=("-m" "$co_auth_3")
     elif [[ $i == "Nathan" || $i == "3" ]]; then
-        commit_string+=$co_auth_1
-        commit_string+=',\n'
+        commit_messages+=("-m" "$co_auth_1")
     elif [[ $i == "Steven" || $i == "4" ]]; then
-        commit_string+=$co_auth_4
-        commit_string+=',\n'
+        commit_messages+=("-m" "$co_auth_4")
     fi
 done
-commit_string+='"'
+
+# Optional: Add your own signature if needed
+# commit_messages+=("-m" "$thy_self")
+
+# Read branch name
 read -p "`echo $'Enter branch to push: '`" branch
-git commit -m $commit_string
+
+# Display the final commit command for debugging purposes
+echo "git commit ${commit_messages[@]}"
+
+# Perform git commit and push
+git commit "${commit_messages[@]}"
 git push -u origin $branch
