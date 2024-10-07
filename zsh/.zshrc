@@ -85,6 +85,9 @@ alias zig='~/zig/./zig'
 # Code wit Me (intelliJ)
 alias co_auth='~/.scripts/github/co_auth.sh'
 
+# Windows Subsystem for Linux
+alias winCD='/mnt/c/Users/Owner/Desktop/'
+alias winCD_D='/mnt/d/code/'
 #----------------- FUNCTIONS ----------------#
 
 vi() {
