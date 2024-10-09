@@ -105,6 +105,7 @@ static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_w, spawn,               {.v = termcmd } },
 	{ MODKEY,                       XK_f,      spawn,          {.v = firefoxcmd } },
 	{ MODKEY|ShiftMask,             XK_Escape, spawn,          {.v = powermenu } },
 	{ MODKEY,			XK_s,	   spawn,          {.v = screenie_box } },

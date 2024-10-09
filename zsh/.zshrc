@@ -85,9 +85,9 @@ alias zig='~/zig/./zig'
 # Code wit Me (intelliJ)
 alias co_auth='~/.scripts/github/co_auth.sh'
 
-# Windows Subsystem for Linux
-alias winCD='/mnt/c/Users/Owner/Desktop/'
-alias winCD_D='/mnt/d/code/'
+# Second Monitor shenanigans
+alias dup_mon='xrandr --output eDP-1 --mode 2880x1620 --rate 120.00 --output HDMI-1 --same-as eDP-1 --scale-from 2880x1620'
+
 #----------------- FUNCTIONS ----------------#
 
 vi() {
