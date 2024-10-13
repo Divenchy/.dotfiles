@@ -58,6 +58,22 @@ function _p9k_init_locale() {
     _p9k_preinit
   fi
   typeset -gr __p9k_sourced=13
+  if [[ $ZSH_VERSION == (5.<1->*|<6->.*) ]]; then
+    if [[ -w $__p9k_root_dir && -w $__p9k_root_dir/internal && -w $__p9k_root_dir/gitstatus ]]; then
+      local f
+      for f in $__p9k_root_dir/{powerlevel9k.zsh-theme,powerlevel10k.zsh-theme,internal/p10k.zsh,internal/icons.zsh,internal/configure.zsh,internal/worker.zsh,internal/parser.zsh,gitstatus/gitstatus.plugin.zsh,gitstatus/install}; do
+        [[ $f.zwc -nt $f ]] && continue
+        zmodload -F zsh/files b:zf_mv b:zf_rm
+        local tmp=$f.tmp.$$.zwc
+        {
+          # `zf_mv -f src dst` fails on NTFS if `dst` is not writable, hence `zf_rm`.
+          zf_rm -f -- $f.zwc && zcompile -R -- $tmp $f && zf_mv -f -- $tmp $f.zwc
+        } always {
+          (( $? )) && zf_rm -f -- $tmp
+        }
+      done
+    fi
+  fi
   builtin source $__p9k_root_dir/internal/p10k.zsh || true
 }
 
