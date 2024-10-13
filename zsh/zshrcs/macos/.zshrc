@@ -23,7 +23,7 @@ eval "$(thefuck --alias fk)"
 export PATH="~/.config/bin:$PATH"
 export PATH="~/.local/bin:$PATH"
 export JFX_PATH="/home/weoweo/binaries/javafx-sdk-22.0.2/lib"
-export JAVA_HOME="/Users/lf/Library/Java/JavaVirtualMachines/"
+export JAVA_HOME="/Users/lf/Library/Java/JavaVirtualMachines/openjdk-23/Contents/Home/"
 
 # Defaults
 export EDITOR="nvim"
