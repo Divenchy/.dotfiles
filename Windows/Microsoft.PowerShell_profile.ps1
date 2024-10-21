@@ -2,7 +2,9 @@
 Set-Alias vi nvim
 Set-Alias vim nvim
 Set-Alias make mingw32-make
-Set-Alias pwshRC pathToPwshProfile
+Set-Alias PWSHRC pathToPwshProfile
+Set-Alias grep findstr
+Set-Alias help Get-Help
 
 #Functions
 function whereis ($command) {
@@ -16,6 +18,18 @@ function pathToPwshProfile {
 
 function nvrc {
     nvim C:\Users\lfexp\AppData\Local\nvim\
+}
+
+function cp ($arg1, $arg2) {
+    Copy-Item $arg1 -Destination $arg2
+}
+
+function cat ($filepath) {
+    Get-Content -PATH $filepath | ForEach-Object { Write-Host $_}
+}
+
+function sPWSH {
+    . $PROFILE
 }
 
 function q{exit}
@@ -41,8 +55,13 @@ oh-my-posh init pwsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/
 #Terminal-Icons
 Import-Module Terminal-Icons
 
+#Fzf
+Import-Module PSFzf
+Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
+
 #PSReadLine
 Import-Module PSReadLine
 Set-PSReadlineOption -EditMode Emacs
 Set-PSReadLineKeyHandler -key Tab -Function Complete
+Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -PredictionViewStyle ListView
