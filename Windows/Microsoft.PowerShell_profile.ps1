@@ -5,6 +5,10 @@ Set-Alias make mingw32-make
 Set-Alias PWSHRC pathToPwshProfile
 Set-Alias grep findstr
 Set-Alias help Get-Help
+Set-Alias -Name ".." -Value reverseDir
+Set-Alias -Name "..." -Value reverseDir2
+Set-Alias -Name "...." -Value reverseDir3
+Set-Alias dc docker-compose
 
 #Functions
 function whereis ($command) {
@@ -26,6 +30,18 @@ function cp ($arg1, $arg2) {
 
 function cat ($filepath) {
     Get-Content -PATH $filepath | ForEach-Object { Write-Host $_}
+}
+
+function reverseDir {
+    Set-Location ..
+}
+
+function reverseDir2 {
+    Set-Location ../../
+}
+
+function reverseDir3 {
+    Set-Location ../../../
 }
 
 function sPWSH {
