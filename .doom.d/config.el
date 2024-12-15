@@ -62,42 +62,6 @@
 ;; Use a block cursor in insert mode
 (setq evil-insert-state-cursor 'box)
 
-;; Change to be more Colemak Friendly
-;; Normal Mode Manuvering
-(define-key evil-normal-state-map "i" nil)
-(define-key evil-normal-state-map "m" nil)
-(define-key evil-normal-state-map "h" nil)
-(define-key evil-normal-state-map "j" nil)
-(define-key evil-normal-state-map "k" nil)
-(define-key evil-normal-state-map "l" nil)
-;; Bindings
-(define-key evil-motion-state-map "m" 'evil-backward-char)
-(define-key evil-motion-state-map "n" 'evil-next-line)
-(define-key evil-motion-state-map "e" 'evil-previous-line)
-(define-key evil-motion-state-map "i" 'evil-forward-char)
-(define-key evil-motion-state-map "h" 'evil-insert)
-(evil-define-key 'normal 'global (kbd "H") 'evil-insert-line)
-(define-key evil-motion-state-map (kbd "C-H") 'insert-char)
-(define-key evil-insert-state-map (kbd "C-e") 'evil-normal-state)
-(define-key evil-normal-state-map (kbd "C-e") 'evil-normal-state)
-
-;; Visual Mode
-;; Unbind
-(define-key evil-visual-state-map "i" nil)
-(define-key evil-visual-state-map "m" nil)
-(define-key evil-visual-state-map "h" nil)
-(define-key evil-visual-state-map "j" nil)
-(define-key evil-visual-state-map "k" nil)
-(define-key evil-visual-state-map "l" nil)
-;; Bindings
-(define-key evil-visual-state-map "m" 'evil-backward-char)
-(define-key evil-visual-state-map "n" 'evil-next-line)
-(define-key evil-visual-state-map "e" 'evil-previous-line)
-(define-key evil-visual-state-map "i" 'evil-forward-char)
-(define-key evil-visual-state-map "h" 'evil-insert)
-(define-key evil-visual-state-map "H" 'insert-char)
-(define-key evil-visual-state-map (kbd "C-e") 'evil-normal-state)
-(define-key evil-visual-state-map (kbd "C-e") 'evil-normal-state)
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
 ;;
