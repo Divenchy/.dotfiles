@@ -74,6 +74,7 @@ alias nvrc="nvim ~/.config/nvim/"
 alias rf="ranger"
 alias mixer="pulsemixer"
 alias pac="sudo pacman -Sy"
+alias md="mkdir"
 
 # Nifty for school
 alias discord='flatpak run com.discordapp.Discord'
