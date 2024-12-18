@@ -6,6 +6,10 @@
 #     tmux source ~/.tmux.conf
 # fi
 
+if [ "$(tty)" = "/dev/tty1" ];then
+  exec dbus-run-session hyprland
+fi
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -15,11 +19,9 @@ fi
 
 
 
-
 ### SHELL INTEGRATIONS ###
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-eval "$(thefuck --alias fk)"
 export PATH="~/.config/bin:$PATH"
 export PATH="~/.local/bin:$PATH"
 export MAVEN_HOME="/home/weoweowsl/apache-maven-3.9.9/"
@@ -31,6 +33,7 @@ export JAVA_HOME="/usr/lib64/jvm/java-23-openjdk-23/"
 export EDITOR="nvim"
 export SUDO_EDITOR="/usr/local/bin/nvim"
 export TERMINAL="st"
+export BROWSER="firefox"
 
 # Setup previews with fzf
 export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
@@ -71,6 +74,7 @@ alias colemak="xmodmap ~/keymaps/.Xmodmap"
 alias TAMUDrive='cd /run/user/1000/gvfs/smb-share:server=storage.continu      um.tamu.edu,share=web/S-1-5-21-1167378736-2199707310-2242153877-1032325/      public_html'
 alias nvrc="nvim ~/.config/nvim/"
 alias rf="ranger"
+alias mixer="pulsemixer"
 
 # Nifty for school
 alias googVM='ssh -i ~/.ssh/google_vm lfexp35@35.223.84.22'
@@ -171,3 +175,10 @@ export SDKMAN_DIR="$HOME/.sdkman"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# bun completions
+[ -s "/home/weoweo/.bun/_bun" ] && source "/home/weoweo/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
