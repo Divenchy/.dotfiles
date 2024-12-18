@@ -24,10 +24,10 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 export PATH="~/.config/bin:$PATH"
 export PATH="~/.local/bin:$PATH"
-export MAVEN_HOME="/home/weoweowsl/apache-maven-3.9.9/"
-PATH=$PATH:$MAVEN_HOME/bin
-export JFX_PATH="/home/weoweo/binaries/javafx-sdk-22.0.2/lib"
-export JAVA_HOME="/usr/lib64/jvm/java-23-openjdk-23/"
+# export MAVEN_HOME="/home/weoweowsl/apache-maven-3.9.9/"
+# PATH=$PATH:$MAVEN_HOME/bin
+# export JFX_PATH="/home/weoweo/binaries/javafx-sdk-22.0.2/lib"
+# export JAVA_HOME="/usr/lib64/jvm/java-23-openjdk-23/"
 
 # Defaults
 export EDITOR="nvim"
