@@ -74,6 +74,8 @@ alias nvrc="nvim ~/.config/nvim/"
 alias rf="ranger"
 alias mixer="pulsemixer"
 alias pac="sudo pacman -Sy"
+alias pacrm="sudo pacman -Rns"
+alias lg="lazygit"
 alias md="mkdir"
 
 # Nifty for school
@@ -81,7 +83,7 @@ alias discord='flatpak run com.discordapp.Discord'
 
 # Makefiles
 alias makeBuild='~/.scripts/buildTemplates/create.sh'
-
+      u
 alias zig='~/zig/./zig'
 
 # Second Monitor shenanigans
