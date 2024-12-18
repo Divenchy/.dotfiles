@@ -66,29 +66,22 @@ alias fishrc="nvim ~/.config/fish/config.fish"
 alias szshrc="source ~/.zshrc"
 alias zshrc="nvim ~/.zshrc"
 alias q="exit"
-alias zyp="sudo zypper"
-alias zypse="zypper se"
-alias sysUpt="sudo zypper dup"
+alias sysUpt="sudo pacman -Syu"
 alias qwerty="xmodmap ~/keymaps/qwerty/.Xmodmap"
 alias colemak="xmodmap ~/keymaps/.Xmodmap"
 alias TAMUDrive='cd /run/user/1000/gvfs/smb-share:server=storage.continu      um.tamu.edu,share=web/S-1-5-21-1167378736-2199707310-2242153877-1032325/      public_html'
 alias nvrc="nvim ~/.config/nvim/"
 alias rf="ranger"
 alias mixer="pulsemixer"
+alias pac="sudo pacman -Sy"
 
 # Nifty for school
-alias googVM='ssh -i ~/.ssh/google_vm lfexp35@35.223.84.22'
 alias discord='flatpak run com.discordapp.Discord'
 
 # Makefiles
 alias makeBuild='~/.scripts/buildTemplates/create.sh'
 
-# Database (School)
-alias proj_db='psql -h csce-315-db.engr.tamu.edu -p 5432 -U csce331_12 -d csce331_12'
 alias zig='~/zig/./zig'
-
-# Code wit Me (intelliJ)
-alias co_auth='~/.scripts/github/co_auth.sh'
 
 # Second Monitor shenanigans
 alias dup_mon='xrandr --output eDP-1 --mode 2880x1620 --rate 120.00 --output HDMI-1 --same-as eDP-1 --scale-from 2880x1620'
