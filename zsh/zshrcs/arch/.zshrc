@@ -83,7 +83,6 @@ alias discord='flatpak run com.discordapp.Discord'
 
 # Makefiles
 alias makeBuild='~/.scripts/buildTemplates/create.sh'
-      u
 alias zig='~/zig/./zig'
 
 # Second Monitor shenanigans
