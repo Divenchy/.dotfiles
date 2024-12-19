@@ -29,6 +29,10 @@ export PATH="~/.local/bin:$PATH"
 # export JFX_PATH="/home/weoweo/binaries/javafx-sdk-22.0.2/lib"
 # export JAVA_HOME="/usr/lib64/jvm/java-23-openjdk-23/"
 
+## Ruby
+export GEM_HOME="$HOME/.gem"
+export PATH="$GEM_HOME/bin:$PATH"
+
 # Defaults
 export EDITOR="nvim"
 export SUDO_EDITOR="/usr/local/bin/nvim"
