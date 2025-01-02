@@ -79,7 +79,8 @@ alias xbpsrm="sudo xbps-remove"
 alias sysUpt="sudo xbps-install -Sun"
 alias lg="lazygit"
 alias md="mkdir"
-alias Hypr="Hyprland"
+alias Hypr="dbus-run-session Hyprland"
+alias chadwm='startx ~/.config/chadwm/scripts/run.sh'
 
 
 # Nifty for school
