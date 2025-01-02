@@ -6,9 +6,6 @@
 #     tmux source ~/.tmux.conf
 # fi
 
-if [ "$(tty)" = "/dev/tty1" ];then
-    exec dbus-run-session hyprland
-fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -20,6 +17,7 @@ fi
 
 
 ### SHELL INTEGRATIONS ###
+eval "fastfetch"
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 export PATH="~/.config/bin:$PATH"
@@ -36,7 +34,7 @@ export PATH="$GEM_HOME/bin:$PATH"
 # Defaults
 export EDITOR="nvim"
 export SUDO_EDITOR="/usr/local/bin/nvim"
-export TERMINAL="st"
+export TERMINAL="wezterm"
 export BROWSER="zen-browser"
 
 # Setup previews with fzf
@@ -70,27 +68,32 @@ alias fishrc="nvim ~/.config/fish/config.fish"
 alias szshrc="source ~/.zshrc"
 alias zshrc="nvim ~/.zshrc"
 alias q="exit"
-alias sysUpt="sudo pacman -Syu"
 alias qwerty="xmodmap ~/keymaps/qwerty/.Xmodmap"
 alias colemak="xmodmap ~/keymaps/.Xmodmap"
 alias TAMUDrive='cd /run/user/1000/gvfs/smb-share:server=storage.continu      um.tamu.edu,share=web/S-1-5-21-1167378736-2199707310-2242153877-1032325/      public_html'
 alias nvrc="nvim ~/.config/nvim/"
 alias rf="ranger"
 alias mixer="pulsemixer"
-alias pac="sudo pacman -Sy"
-alias pacrm="sudo pacman -Rns"
+alias xbpsin="sudo xbps-install"
+alias xbpsrm="sudo xbps-remove"
+alias sysUpt="sudo xbps-install -Sun"
 alias lg="lazygit"
 alias md="mkdir"
+alias Hypr="Hyprland"
+
 
 # Nifty for school
 alias discord='flatpak run com.discordapp.Discord'
 
 # Makefiles
 alias makeBuild='~/.scripts/buildTemplates/create.sh'
-alias zig='~/zig/./zig'
 
 # Second Monitor shenanigans
 alias dup_mon='xrandr --output eDP-1 --mode 2880x1620 --rate 120.00 --output HDMI-1 --same-as eDP-1 --scale-from 2880x1620'
+
+
+# VARS
+export SDIR="/var/service"
 
 #----------------- FUNCTIONS ----------------#
 
@@ -140,6 +143,13 @@ vl() {
         echo "!Closed LazyVim!"
         return
     fi
+}
+
+## For enabling services
+svenable() {
+	read -p "`echo $'Enter name of service to enable: '`" serv
+
+	exec ln -s /etc/sv/$serv /var/service
 }
 
 ##--------------END OF ALIASES/FUNCTIONS----------------##
