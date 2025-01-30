@@ -1,14 +1,3 @@
-### Start TMUX
-# if [[ "$TMUX" = "" ]]; then;
-#     TMUX="tmux new-session -d -s WEODIMENSION"
-#     eval "$TMUX"
-#     tmux attach-session -d -t WEODIMENSION
-#     tmux source ~/.tmux.conf
-# fi
-
-if [ "$(tty)" = "/dev/tty1" ];then
-    exec dbus-run-session hyprland
-fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
