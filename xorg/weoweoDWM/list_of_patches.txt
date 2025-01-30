@@ -1,0 +1,7 @@
+Patches:
+vanitygaps
+attachbelow
+alwayscenter
+focusadjacenttag
+barheight
+barpadding

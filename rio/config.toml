@@ -1,0 +1,26 @@
+[renderer]
+filters = [
+  "/Users/lfexp/Documents/slang-shaders-master/crt/newpixie-crt.slangp"
+]
+backend = "DX12"
+target-fps = 120
+strategy = "continuous"
+
+[fonts]
+size = 28
+family = "JetBrainsMono NF"
+
+[editor]
+program = "nvim"
+args = []
+
+[window]
+opacity = 1.0
+blur = false
+decorations = "Disabled"
+
+[shell]
+program = "pwsh"
+args = ["-NoExit", "-Command", "Set-Location '/Users/lfexp'"]
+
+theme = "dracula"

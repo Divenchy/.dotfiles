@@ -1,0 +1,37 @@
+clear lock
+clear mod5
+keycode 108 = Mode_switch NoSymbol NoSymbol NoSymbol 
+keycode 66 = backslash bar NoSymbol NoSymbol
+
+
+keycode 24 = q Q numbersign at
+keycode 25 = w W equal plus 
+keycode 26 = f F minus underscore 
+keycode 27 = p P apostrophe quotedbl 
+keycode 28 = b B b B
+keycode 29 = j J j J
+keycode 30 = l L l L
+keycode 31 = u U u U
+keycode 32 = y Y y Y
+keycode 33 = semicolon colon semicolon colon
+keycode 38 = a A parenleft exclam 
+keycode 39 = r R parenright question 
+keycode 40 = s S bracketleft braceleft
+keycode 41 = t T bracketright braceright
+keycode 42 = g G g G
+keycode 43 = m M Left Left
+keycode 44 = n N Down Down
+keycode 45 = e E Up Up
+keycode 46 = i I Right Right
+keycode 47 = o O o O
+keycode 52 = z Z z Z
+keycode 53 = x X x X
+keycode 54 = c C c C
+keycode 55 = d D grave asciitilde
+keycode 56 = v V v V
+keycode 57 = k K k K
+keycode 58 = h H h H
+keycode 59 = comma less comma less
+keycode 60 = period greater period greater
+
+

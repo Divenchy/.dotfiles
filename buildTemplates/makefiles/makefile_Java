@@ -1,0 +1,22 @@
+JFXFLAGS=--module-path $(JFX_PATH) --add-modules javafx.controls
+JC=javac
+JR=java
+.SUFFIXES: .java .class
+.java.class:
+	$(JC) $(JFXFLAGS) $*.java
+
+SRCS=$(wildcard *.java)
+CLASSES=$(SRCS:.java=.class)
+
+MAIN= Main
+
+default: classes
+
+classes: $(CLASSES)
+
+clean:
+	rm -f *.class
+
+run: classes
+	$(JR) $(JFXFLAGS) $(MAIN)
+

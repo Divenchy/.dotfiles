@@ -1,0 +1,14 @@
+xmodmap ~/keymaps/.Xmodmap
+
+xrandr --output eDP-1 --mode 3840x2400 --scale 1.5x1.5 --rate 60.00 --output HDMI-1 --same-as eDP-1 --scale-from 3840x2400
+
+xset -dpms
+xset s off
+
+feh --bg-scale ~/Pictures/green_mountain_range_overcast.jpg
+slstatus &
+picom &
+
+firefox &
+
+exec dbus-run-session dwm
