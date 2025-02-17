@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-scale '/home/weoweo/.config/fall_moutainside.jpg' 
+feh --no-fehbg --bg-scale '/home/weoweo/Pictures/bw_snowy_mountainside.jpg'

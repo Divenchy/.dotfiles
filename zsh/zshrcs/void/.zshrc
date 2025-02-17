@@ -24,6 +24,13 @@ export EDITOR="nvim"
 export SUDO_EDITOR="/usr/local/bin/nvim"
 export TERMINAL="wezterm"
 export BROWSER="zen-browser"
+export GLM_INCLUDE_DIR="/home/weoweo/OpenGL/glm-1.0.1"
+export GLFW_DIR="/home/weoweo/OpenGL/glfw-3.4"
+export GLEW_DIR="/home/weoweo/OpenGL/glew-2.1.0"
+export EIGEN3_INCLUDE_DIR="/home/weoweo/OpenGL/eigen-3.4.0"
+export WLR_NO_HARDWARE_CURSORS=1
+export GBM_BACKEND=nvidia-drm
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
 
 # Setup previews with fzf
 export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
@@ -62,16 +69,22 @@ alias TAMUDrive='cd /run/user/1000/gvfs/smb-share:server=storage.continu      um
 alias nvrc="nvim ~/.config/nvim/"
 alias rf="ranger"
 alias mixer="pulsemixer"
-alias xbpsin="sudo xbps-install"
-alias xbpsrm="sudo xbps-remove"
-alias xbpsqr="xbps-query -R"
+alias xbpsin="sudo xbps-install -Sy"
+alias xbpsrm="sudo xbps-remove -R"
+alias xbpsqr="xbps-query -Rs"
 alias xbpsq="xbps-query"
 alias sysUpt="sudo xbps-install -Sun"
 alias lg="lazygit"
 alias md="mkdir"
 alias Hypr="dbus-run-session Hyprland"
-alias wayfire="dbus-run-session wayfire -c ~/.config/wayfire/wayfire.ini"
+alias wf="prime-run dbus-run-session wayfire -c ~/.config/wayfire/wayfire.ini"
 alias ff="fastfetch"
+alias scaleX11="export GDK_SCALE=2 && QT_SCALE_FACTOR=2"
+
+# So good for Animation & Graphics class
+alias cbuild="mkdir build && cd build && cmake .. && make -j4"
+# Rebuild after creating header so it can link
+alias rbuild="cd .. && rm -rf build && mkdir build && cd build && cmake .. && make -j4"
 
 
 # Nifty for school
